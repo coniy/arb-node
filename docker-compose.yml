@@ -11,6 +11,7 @@ services:
       --http.corsdomain=* 
       --http.addr=0.0.0.0
       --http.vhosts=*
+      --init.url="$INIT_URL"
     env_file:
       - .env
     volumes:
