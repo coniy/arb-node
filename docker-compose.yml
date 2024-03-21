@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   nitro-node:
-    image: offchainlabs/nitro-node:${IMAGE_TAG_NITRO_NODE:-latest}
+    image: offchainlabs/nitro-node:${IMAGE_TAG_NITRO_NODE:-v2.3.2-064fa11}
     restart: on-failure
     stop_grace_period: 5m
     command: >
