@@ -5,7 +5,7 @@ services:
     restart: on-failure
     stop_grace_period: 5m
     command: >
-      nitro-node
+      nitro
       --parent-chain.connection.url="$L1_RPC_URL"
       --http.api=net,web3,eth,debug,trace 
       --http.corsdomain=* 
