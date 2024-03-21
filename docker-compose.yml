@@ -6,6 +6,7 @@ services:
     stop_grace_period: 5m
     command: >
       --parent-chain.connection.url="$L1_RPC_URL"
+      --parent-chain.blob-client.beacon-url="$L1_BEACON_URL"
       --http.api=net,web3,eth,debug,trace 
       --http.corsdomain=* 
       --http.addr=0.0.0.0
@@ -14,10 +15,7 @@ services:
     env_file:
       - .env
     volumes:
-      - arbitrum:/home/user/.arbitrum
+      - ./arbitrum:/home/user/.arbitrum
     ports:
       - ${PORT_NITRO_HTTP:-17001}:8545
       - ${PORT_NITRO_WS:-17002}:8546
-
-volumes:
-  arbitrum:
