@@ -15,7 +15,10 @@ services:
     env_file:
       - .env
     volumes:
-      - ./arbitrum:/home/user/.arbitrum
+      - arbitrum:/home/user/.arbitrum
     ports:
       - ${PORT_NITRO_HTTP:-17001}:8545
       - ${PORT_NITRO_WS:-17002}:8546
+
+volumes:
+  arbitrum:
